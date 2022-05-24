@@ -72,8 +72,8 @@ export default function Home() {
     <main>
       <Head>
         <title>
-          Find the substance you're looking for, without the scrubbing | Yoogle;
-          caption search
+          Find the substance you&apos;re looking for, without the scrubbing |
+          Yoogle; caption search
         </title>
         <meta
           name="description"
