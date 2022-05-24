@@ -1,20 +1,34 @@
-import { GlobeAltIcon, LightningBoltIcon, AcademicCapIcon, ScaleIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import {
+  GlobeAltIcon,
+  LightningBoltIcon,
+  AcademicCapIcon,
+  ScaleIcon,
+} from "@heroicons/react/outline";
+import Link from "next/link";
+import Head from "next/head";
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
   {
-    name: 'Linkedin',
-    href: 'https://linkedin.com/in/danferg',
+    name: "Linkedin",
+    href: "https://linkedin.com/in/danferg",
     icon: (props) => (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+      </svg>
     ),
   },
   {
-    name: 'GitHub',
-    href: 'https://github.com/danielferguson/yoogle-v2',
+    name: "GitHub",
+    href: "https://github.com/danielferguson/yoogle",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -25,40 +39,54 @@ const navigation = [
       </svg>
     ),
   },
-]
+];
 
 const features = [
   {
-    name: 'High quality captions',
-    description: 'We capture high-quality captions in order to help our users find what they\'re looking for, fast.',
+    name: "High quality captions",
+    description:
+      "We capture high-quality captions in order to help our users find what they're looking for, fast.",
     icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
-    description:
-      'This platform is completely free!',
+    name: "No hidden fees",
+    description: "This platform is completely free!",
     icon: ScaleIcon,
   },
   {
-    name: 'Instant search',
+    name: "Instant search",
     description:
-      'We use industry-class search engines in order to deliver results within a fraction of a second.',
+      "We use industry-class search engines in order to deliver results within a fraction of a second.",
     icon: LightningBoltIcon,
   },
   {
-    name: 'Quickly reference',
+    name: "Quickly reference",
     description:
-      'With fast search comes faster referencing. YouTube is a great way for finding community-sourced information. Find it, then use it.',
+      "With fast search comes faster referencing. YouTube is a great way for finding community-sourced information. Find it, then use it.",
     icon: AcademicCapIcon,
-  }
-]
+  },
+];
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <title>
+          Find the substance you're looking for, without the scrubbing | Yoogle;
+          caption search
+        </title>
+        <meta
+          name="description"
+          content="Find the content you need, fast - without the need to scrub through full videos and waste time."
+        />
+      </Head>
+
       {/* Hero */}
       <div className="relative bg-gray-50 overflow-hidden">
-        <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+        <div
+          className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full"
+          aria-hidden="true"
+        >
           <div className="relative h-full max-w-7xl mx-auto">
             <svg
               className="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
@@ -76,10 +104,21 @@ export default function Home() {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={784} fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+              <rect
+                width={404}
+                height={784}
+                fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
+              />
             </svg>
             <svg
               className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
@@ -97,10 +136,21 @@ export default function Home() {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={784} fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)" />
+              <rect
+                width={404}
+                height={784}
+                fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
+              />
             </svg>
           </div>
         </div>
@@ -108,7 +158,10 @@ export default function Home() {
         <div className="relative pt-6 pb-16 sm:pb-24">
           <Popover>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+              <nav
+                className="relative flex items-center justify-between sm:h-10 md:justify-center"
+                aria-label="Global"
+              >
                 <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <div className="-mr-2 flex items-center md:hidden">
@@ -119,10 +172,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex md:space-x-10">
-                </div>
-                <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                </div>
+                <div className="hidden md:flex md:space-x-10"></div>
+                <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0"></div>
               </nav>
             </div>
 
@@ -173,17 +224,20 @@ export default function Home() {
           <main className="mt-16 mx-auto max-w-4xl px-4 sm:mt-24">
             <div className="text-center">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Find the videos and content you want,</span>{' '}
-                <span className="block text-indigo-600 xl:inline">when you want it</span>
+                <span className="block xl:inline">
+                  Find the videos and content you want,
+                </span>{" "}
+                <span className="block text-indigo-600 xl:inline">
+                  when you want it
+                </span>
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                A captions-based search engine and ingestion pipeline for YouTube videos.
+                A captions-based search engine and ingestion pipeline for
+                YouTube videos.
               </p>
               <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                 <div className="rounded-md shadow">
-                  <Link
-                    href="/app"
-                  >
+                  <Link href="/app">
                     <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                       Start Searching
                     </a>
@@ -199,23 +253,36 @@ export default function Home() {
       <div className="bg-indigo-800">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">We&apos;ve got some lovely nice stats for you...</h2>
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              We&apos;ve got some lovely nice stats for you...
+            </h2>
             <p className="mt-3 text-xl text-indigo-200 sm:mt-4">
-              I&apos;d love to say that these stats were meaningful, but honestly don&apos;t read into them too much.
+              I&apos;d love to say that these stats were meaningful, but
+              honestly don&apos;t read into them too much.
             </p>
           </div>
           <dl className="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
             <div className="flex flex-col">
-              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">Channels</dt>
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
+                Channels
+              </dt>
               <dd className="order-1 text-5xl font-extrabold text-white">2</dd>
             </div>
             <div className="flex flex-col mt-10 sm:mt-0">
-              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">Captions Ingested</dt>
-              <dd className="order-1 text-5xl font-extrabold text-white">24/7</dd>
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
+                Captions Ingested
+              </dt>
+              <dd className="order-1 text-5xl font-extrabold text-white">
+                24/7
+              </dd>
             </div>
             <div className="flex flex-col mt-10 sm:mt-0">
-              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">Views</dt>
-              <dd className="order-1 text-5xl font-extrabold text-white">100k+</dd>
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
+                Views
+              </dt>
+              <dd className="order-1 text-5xl font-extrabold text-white">
+                100k+
+              </dd>
             </div>
           </dl>
         </div>
@@ -241,10 +308,21 @@ export default function Home() {
                 height={20}
                 patternUnits="userSpaceOnUse"
               >
-                <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                <rect
+                  x={0}
+                  y={0}
+                  width={4}
+                  height={4}
+                  className="text-gray-200"
+                  fill="currentColor"
+                />
               </pattern>
             </defs>
-            <rect width={404} height={784} fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)" />
+            <rect
+              width={404}
+              height={784}
+              fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)"
+            />
           </svg>
 
           <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
@@ -260,9 +338,13 @@ export default function Home() {
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                       <feature.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
-                    <p className="mt-5 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
+                    <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
+                      {feature.name}
+                    </p>
                   </dt>
-                  <dd className="mt-2 text-base text-gray-500">{feature.description}</dd>
+                  <dd className="mt-2 text-base text-gray-500">
+                    {feature.description}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -275,17 +357,23 @@ export default function Home() {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-400 hover:text-gray-500"
+              >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
           </div>
           <div className="mt-8 md:mt-0 md:order-1">
-            <p className="text-center text-base text-gray-400">&copy; 2021 danferg.com - All rights reserved.</p>
+            <p className="text-center text-base text-gray-400">
+              &copy; 2021 danferg.com - All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
     </main>
-  )
+  );
 }
